@@ -17,6 +17,7 @@ namespace IllusionPlugin
             {
                 if (_instance == null)
                 {
+                    System.IO.Directory.CreateDirectory(System.IO.Path.Combine(Environment.CurrentDirectory, "UserData/"));
                     _instance = new IniFile(Path.Combine(Environment.CurrentDirectory, "UserData/modprefs.ini"));
                 }
                 return _instance;
